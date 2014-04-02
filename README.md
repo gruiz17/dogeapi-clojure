@@ -8,7 +8,7 @@ Declare dogeapi-clojure in your project.clj file.
 
 
     (defproject whatever "x.x.x-SNAPSHOT"
-      :dependencies [[dogeapi-clojure]])
+      :dependencies [[dogeapi-clojure "0.1.0"]])
 
 
 To use:
