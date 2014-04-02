@@ -72,7 +72,6 @@ get\_current\_block
 
     (doge/get-current-block wow)
 
-
 get\_current\_price
 
     (doge/get-current-price wow)
@@ -80,47 +79,33 @@ get\_current\_price
     ;; convert-to defaults to USD by default
     (doge/get-current-price wow {:convert-to "BTC" :amount-doge some-number-of-doge})
 
-
 ### v2 functions
 
 create\_user
 
-
     (doge/create-user wow user-id])
-
 
 get\_user\_address
 
-
     (doge/get-user-address wow user-id)
-
 
 get\_user\_balance
 
-
     (doge/get-user-balance wow user-id)
-
 
 withdraw\_from\_user
 
-
     (doge/withdraw-from-user wow pin amount-doge user-id payment-address)
-
 
 move\_to\_user
 
-
     (doge/move-to-user wow to-user-id from-user-id amount-doge)
-
 
 get_users
 
-
     (doge/get-users wow number)
 
-
 get\_transactions
-
 
     (doge/get-transactions wow number)
     ;; optional arguments are :user-id, :payment-address, :label, and :type
@@ -130,18 +115,13 @@ get\_transactions
                                        :label "label"
                                        :type "type"})
 
-
 get\_network\_hashrate
-
 
     (doge/get-network-hashrate wow)
 
-
 get\_info
 
-
     (doge/get-info wow)
-
 
 ## License
 
