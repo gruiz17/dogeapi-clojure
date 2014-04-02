@@ -2,6 +2,12 @@
 
 A DogeAPI wrapper for clojure.
 
+## Installation
+
+```dogeapi-clojure``` is available on [Clojars](http://clojars.org/dogeapi-clojure).
+
+    [dogeapi-clojure "0.1.0"]
+
 ## Usage
 
 Declare dogeapi-clojure in your project.clj file.
