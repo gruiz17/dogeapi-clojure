@@ -61,10 +61,10 @@ get\_my\_addresses
 
 get\_address\_received
 
-    ;; use either
-    (doge/get-address-received wow {:payment-address "payment-address"})
-    ;; or
-    (doge/get-address-received wow {:address-label "address-label"})
+    ;; use either a map with keyword :payment-address + whatever your payment address is
+    (doge/get-address-received wow {:payment-address "whatever-your-payment-address-is"})
+    ;; or keyword :address-label + whatever your address label is
+    (doge/get-address-received wow {:address-label "whatever-your-address-label-is"})
 
 get\_address\_by\_label
 
@@ -83,7 +83,7 @@ get\_current\_price
     (doge/get-current-price wow)
     ;; you can also pass in a map with a :convert-to option and an :amount-doge option (both of which are optional)
     ;; convert-to defaults to USD by default
-    (doge/get-current-price wow {:convert-to "BTC" :amount-doge some-number-of-doge})
+    (doge/get-current-price wow {:convert-to "BTC" :amount-doge 1000})
 
 ### v2 functions
 
@@ -116,10 +116,10 @@ get\_transactions
     (doge/get-transactions wow number)
     ;; optional arguments are :user-id, :payment-address, :label, and :type
     ;; they are passed in after the number argument in a single map
-    (doge/get-transactions wow number {:user-id "user-id"
-                                       :payment-address "payment-address"
-                                       :label "label"
-                                       :type "type"})
+    (doge/get-transactions wow number {:user-id "whatever-user-id-is"
+                                       :payment-address "whatever-your-payment-address-is"
+                                       :label "whatever-your-label-is"
+                                       :type "whatever-your-type-is"})
 
 get\_network\_hashrate
 
