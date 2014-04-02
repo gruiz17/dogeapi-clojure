@@ -91,7 +91,7 @@
 
 (defrecord Doge [api-url base-url]
   DogeMethods
-  (get-balance [this] (json/read-json (:body (http/get (str api-url "&a=get_balance")))))
+  (get-balance [this] (:body (http/get (str api-url "&a=get_balance"))))
   (withdraw [this pin amount-doge payment-address]
     (if (<= amount-doge 5) (println "doge must be more than 5")
     (:body (http/get (str api-url "&a=withdraw&amount_doge=" amount-doge "&pin=" pin "&payment_address=" payment-address))))
@@ -120,9 +120,6 @@
                       )
   )
 
-  (get-network-hashrate [this] (:body (http/get (str base-url "v2/?a=get_network_hashrate"))))
-  (get-info [this] (:body (http/get (str base-url "v2/?a=get_info"))))
-
   (create-user [this user-id] (println "This functionality only in v2 API. Set with (init-doge api-key 2)."))
   (get-user-address [this user-id] (println "This functionality only in v2 API. Set with (init-doge api-key 2)."))
   (get-user-balance [this user-id] (println "This functionality only in v2 API. Set with (init-doge api-key 2)."))
@@ -130,6 +127,12 @@
   (move-to-user [this to-user-id from-user-id amount-doge] (println "This functionality only in v2 API. Set with (init-doge api-key 2)."))
   (get-users [this number] (println "This functionality only in v2 API. Set with (init-doge api-key 2)."))
   (get-transactions [this number] (println "This functionality only in v2 API. Set with (init-doge api-key 2)."))
+  (get-network-hashrate [this] (println "This functionality only in v2 API. Set with (init-doge api-key 2)."))
+  (get-info [this] (println "This functionality only in v2 API. Set with (init-doge api-key 2)."))
+
+  ;; debating whether to add these despite them not being v1
+  ;; (get-network-hashrate [this] (:body (http/get (str base-url "v2/?a=get_network_hashrate"))))
+  ;; (get-info [this] (:body (http/get (str base-url "v2/?a=get_info"))))
 )
 
 (defn init-doge [api-key version]
