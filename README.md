@@ -1,6 +1,6 @@
 # dogeapi-clojure
 
-A [DogeAPI](http://www.dogeapi.com/) wrapper for clojure.
+A [DogeAPI](http://www.dogeapi.com/) wrapper for clojure. For those who don't know, [Clojure](http://clojure.org/) is a really cool programming language. Check it out!
 
 ## Installation
 
