@@ -25,7 +25,7 @@ To use:
     ;; create instance of doge with your api key and the api endpoint you want to use
     ;; version-number is either 1 or 2
     ;; note that some functionality is unavailable through version 1
-    (def wow (init-doge "your-api-key" version-number))
+    (def wow (doge/init-doge "your-api-key" version-number))
 
 If you're using v2, all the methods will return a map, like so:
 
